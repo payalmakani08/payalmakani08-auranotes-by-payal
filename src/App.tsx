@@ -1,4 +1,4 @@
-```tsx
+
 import { useEffect, useMemo, useState } from 'react';
 import type { FormEvent } from 'react';
 import './App.css';
@@ -843,4 +843,3 @@ function App() {
 }
 
 export default App;
-```
