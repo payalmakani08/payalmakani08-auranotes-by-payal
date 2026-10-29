@@ -13,7 +13,7 @@
 /* Header and navigation */
 
 .site-header {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.88);
   border-bottom: 1px solid #eee5f5;
   position: sticky;
   top: 0;
@@ -39,7 +39,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #e6b9d9, #c8c4f3);
+  background: linear-gradient(135deg, #d7c4ff, #fff0a8);
   color: #45375f;
   border-radius: 10px;
   font-size: 19px;
@@ -68,15 +68,16 @@
   color: white;
 }
 
-/* Hero */
+/* Hero section */
 
 .hero-section {
   padding: 75px 0;
+
   background: linear-gradient(
     120deg,
-    #ffe7ef 0%,
-    #eee5ff 48%,
-    #e1f1ff 100%
+    #e9dfff 0%,
+    #fff4c2 55%,
+    #fffdf5 100%
   );
 }
 
@@ -152,7 +153,7 @@
   margin-right: 8px;
 }
 
-/* Notes */
+/* Notes section */
 
 .notes-section {
   padding-top: 65px;
@@ -224,7 +225,7 @@
   border: 1px solid #ebe3f2;
   border-radius: 13px;
   padding: 22px;
-  background: rgba(255, 255, 255, 0.93);
+  background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 3px 12px rgba(80, 61, 110, 0.04);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -350,15 +351,16 @@
   margin-bottom: 0;
 }
 
-/* About */
+/* About section */
 
 .about-section {
   padding: 65px 0;
+
   background: linear-gradient(
     120deg,
-    #fbe7f0,
-    #eee7fc,
-    #e5f2ff
+    #fff9e5,
+    #f0e5ff,
+    #fffdf5
   );
 }
 
@@ -405,7 +407,7 @@
   text-align: right;
 }
 
-/* Mobile */
+/* Mobile responsive */
 
 @media (max-width: 767px) {
   .hero-section {
@@ -450,4 +452,4 @@
   .footer-right {
     text-align: left;
   }
-  }
+}
