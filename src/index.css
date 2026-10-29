@@ -13,12 +13,15 @@ body {
   margin: 0;
   font-family: "Nunito", Arial, sans-serif;
   color: #39344b;
+
+  /* Lavender and butter yellow gradient */
   background: linear-gradient(
     135deg,
-    #fff1f6 0%,
-    #f1eaff 48%,
-    #e9f5ff 100%
+    #e9dfff 0%,
+    #fff4c2 50%,
+    #ffffff 100%
   );
+
   background-attachment: fixed;
 }
 
