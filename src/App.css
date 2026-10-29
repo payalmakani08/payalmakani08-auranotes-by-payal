@@ -1,405 +1,685 @@
-/* ===============================
-   GENERAL
+/* ================================
+AURANOTES - GLOBAL THEME
 ================================ */
 
+* {
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
 body {
-  background: linear-gradient(
-    135deg,
-    #fce7f3 0%,
-    #e9d5ff 35%,
-    #dbeafe 70%,
-    #ffffff 100%
-  );
-  background-attachment: fixed;
+margin: 0;
+color: #302840;
+font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(
+135deg,
+#fff7fc 0%,
+#f4eaff 35%,
+#eaf2ff 70%,
+#ffffff 100%
+);
+}
+
+.app-wrapper {
+min-height: 100vh;
+overflow-x: hidden;
 }
 
 .container {
-  max-width: 1200px;
+max-width: 1140px;
 }
 
-
-/* ===============================
-   NAVBAR
+/* ================================
+HEADER & NAVBAR
 ================================ */
 
-.navbar {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
-  box-shadow: 0 4px 20px rgba(147, 112, 219, 0.08);
+.site-header {
+position: sticky;
+top: 0;
+z-index: 1000;
+background: rgba(255, 255, 255, 0.94);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid #eee2fa;
 }
 
-.navbar-brand {
-  font-weight: 700;
-  font-size: 1.5rem;
-  background: linear-gradient(
-    90deg,
-    #ec4899,
-    #8b5cf6,
-    #3b82f6
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.site-header .navbar {
+padding: 14px 0;
+}
+
+.brand-name {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+font-size: 1.45rem;
+font-weight: 700;
+color: #5f3d8b;
+}
+
+.brand-name:hover {
+color: #8b5ac2;
+}
+
+.brand-icon {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 36px;
+height: 36px;
+color: #fff;
+border-radius: 12px;
+background: linear-gradient(135deg, #ed9bc9, #a78bfa, #8bb9ff);
+}
+
+.navbar-nav {
+gap: 8px;
 }
 
 .nav-link {
-  color: #5b5270 !important;
-  font-weight: 500;
-  transition: 0.3s ease;
+padding: 9px 15px !important;
+color: #655a76 !important;
+font-weight: 500;
+border-radius: 20px;
+transition: 0.2s ease;
 }
 
-.nav-link:hover {
-  color: #a855f7 !important;
+.nav-link:hover,
+.nav-link.active {
+color: #8b5ac2 !important;
+background: #f5eaff;
 }
 
+.add-note-nav {
+color: white;
+padding: 10px 20px;
+border: 0;
+border-radius: 24px;
+background: linear-gradient(120deg, #e99acb, #a78bfa, #8bb9ff);
+}
 
-/* ===============================
-   HERO SECTION
+/* ================================
+BUTTONS
 ================================ */
 
-.hero {
-  padding: 100px 20px 80px;
-  text-align: center;
-
-  background: linear-gradient(
-    120deg,
-    #fbcfe8 0%,
-    #e9d5ff 35%,
-    #dbeafe 70%,
-    #ffffff 100%
-  );
+.primary-button {
+display: inline-flex;
+justify-content: center;
+align-items: center;
+min-height: 44px;
+padding: 11px 24px;
+border: none;
+border-radius: 25px;
+color: #fff;
+font-size: 0.95rem;
+font-weight: 600;
+background: linear-gradient(120deg, #e99acb, #a78bfa, #8bb9ff);
+box-shadow: 0 5px 14px rgba(164, 126, 220, 0.18);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.hero h1 {
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  font-weight: 700;
-  color: #302443;
-  margin-bottom: 20px;
+.primary-button:hover {
+color: #fff;
+transform: translateY(-2px);
+box-shadow: 0 8px 20px rgba(164, 126, 220, 0.25);
 }
 
-.hero h1 span {
-  background: linear-gradient(
-    90deg,
-    #ec4899,
-    #a855f7,
-    #3b82f6
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-  color: #665b7a;
-  font-size: 1.05rem;
-  max-width: 650px;
-  margin: 0 auto 30px;
-  line-height: 1.8;
-}
-
-
-/* ===============================
-   BUTTONS
+/* ================================
+HERO SECTION
 ================================ */
 
-.btn-primary {
-  background: linear-gradient(
-    90deg,
-    #ec4899,
-    #a855f7,
-    #6366f1
-  ) !important;
-
-  border: none !important;
-  border-radius: 30px;
-  padding: 12px 28px;
-  font-weight: 600;
-
-  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.hero-section {
+padding: 65px 0;
+background: linear-gradient(
+120deg,
+#fce6f4 0%,
+#eee3ff 48%,
+#e2efff 100%
+);
 }
 
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(168, 85, 247, 0.3);
+.hero-section .row {
+align-items: center;
 }
 
-.btn-outline-primary {
-  border: 1px solid #a855f7 !important;
-  color: #9333ea !important;
-  border-radius: 30px;
+.small-label {
+margin-bottom: 12px;
+color: #9a65b9;
+font-size: 0.76rem;
+font-weight: 700;
+letter-spacing: 1.5px;
 }
 
-.btn-outline-primary:hover {
-  color: white !important;
-  background: linear-gradient(
-    90deg,
-    #ec4899,
-    #a855f7,
-    #6366f1
-  ) !important;
+.hero-section h1 {
+margin-bottom: 20px;
+color: #302840;
+font-size: clamp(2.5rem, 5vw, 4.4rem);
+font-weight: 700;
+line-height: 1.12;
+letter-spacing: -1.5px;
 }
 
-
-/* ===============================
-   SECTION HEADINGS
-================================ */
-
-.section-title {
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #352449;
-  margin-bottom: 15px;
+.hero-section h1 span {
+color: #a16ec7;
 }
 
-.section-subtitle {
-  text-align: center;
-  color: #756781;
-  margin-bottom: 40px;
+.hero-description {
+max-width: 500px;
+margin-bottom: 25px;
+color: #6e647c;
+font-size: 1.02rem;
+line-height: 1.8;
 }
 
+.hero-image-box {
+position: relative;
+max-width: 470px;
+margin-left: auto;
+padding: 12px;
+background: rgba(255, 255, 255, 0.75);
+border: 1px solid rgba(255, 255, 255, 0.9);
+border-radius: 24px;
+box-shadow: 0 15px 40px rgba(123, 96, 157, 0.12);
+}
 
-/* ===============================
-   NOTES SECTION
+.hero-image {
+display: block;
+width: 100%;
+height: 330px;
+object-fit: cover;
+border-radius: 16px;
+}
+
+.image-caption {
+padding: 12px 8px 2px;
+color: #766783;
+font-size: 0.85rem;
+}
+
+/* ================================
+NOTES SECTION
 ================================ */
 
 .notes-section {
-  padding: 70px 20px;
+padding-top: 75px;
+padding-bottom: 80px;
 }
 
+.section-heading {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 25px;
+margin-bottom: 30px;
+}
+
+.section-heading h2 {
+margin: 0 0 10px;
+color: #302840;
+font-size: 2.25rem;
+font-weight: 700;
+}
+
+.section-description {
+margin: 0;
+color: #796e86;
+line-height: 1.7;
+}
+
+/* ================================
+SEARCH & FILTER
+================================ */
+
+.notes-tools {
+display: grid;
+grid-template-columns: minmax(0, 1fr) 220px;
+gap: 15px;
+margin-bottom: 30px;
+}
+
+.search-box {
+display: flex;
+align-items: center;
+gap: 12px;
+min-width: 0;
+padding: 0 17px;
+border: 1px solid #e5d7f3;
+border-radius: 14px;
+background: rgba(255, 255, 255, 0.88);
+}
+
+.search-box span {
+color: #a17ac5;
+font-size: 1.5rem;
+}
+
+.search-box input {
+width: 100%;
+min-width: 0;
+padding: 14px 0;
+border: none;
+outline: none;
+background: transparent;
+color: #302840;
+}
+
+.subject-filter {
+min-height: 50px;
+border: 1px solid #e5d7f3;
+border-radius: 14px;
+background-color: rgba(255, 255, 255, 0.88);
+color: #655a76;
+}
+
+/* ================================
+NOTE CARDS
+================================ */
+
 .note-card {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(216, 180, 254, 0.4);
-  border-radius: 20px;
-  overflow: hidden;
-
-  box-shadow: 0 8px 25px rgba(147, 112, 219, 0.1);
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
+display: flex;
+flex-direction: column;
+min-width: 0;
+padding: 22px;
+border: 1px solid #eadff5;
+border-radius: 20px;
+background: rgba(255, 255, 255, 0.94);
+box-shadow: 0 8px 24px rgba(117, 89, 151, 0.07);
+transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
 .note-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 15px 35px rgba(147, 112, 219, 0.2);
+transform: translateY(-4px);
+box-shadow: 0 13px 30px rgba(117, 89, 151, 0.13);
 }
 
-.note-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.note-card-top {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 12px;
+margin-bottom: 18px;
 }
 
-.note-card .card-body {
-  padding: 22px;
+.subject-badge {
+display: inline-block;
+max-width: calc(100% - 40px);
+padding: 7px 13px;
+overflow-wrap: anywhere;
+border-radius: 20px;
+background: linear-gradient(120deg, #fce4f2, #eee3ff, #e1efff);
+color: #8255a5;
+font-size: 0.78rem;
+font-weight: 600;
 }
 
-.note-card .card-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #39284e;
+.delete-note {
+flex: 0 0 32px;
+width: 32px;
+height: 32px;
+padding: 0;
+border: none;
+border-radius: 50%;
+background: #fff0f6;
+color: #c45b91;
+font-size: 1.35rem;
+line-height: 1;
+cursor: pointer;
 }
 
-.note-card .card-text {
-  color: #716580;
-  line-height: 1.7;
+.delete-note:hover {
+background: #fbd5e8;
 }
 
-.note-card .badge {
-  background: linear-gradient(
-    90deg,
-    #fbcfe8,
-    #ddd6fe,
-    #bfdbfe
-  ) !important;
-
-  color: #5b21b6;
-  padding: 8px 12px;
-  border-radius: 20px;
+.note-card h3 {
+margin: 0 0 12px;
+color: #342a43;
+font-size: 1.2rem;
+font-weight: 700;
+line-height: 1.45;
+overflow-wrap: anywhere;
 }
 
+.note-content {
+flex: 1;
+margin: 0 0 22px;
+color: #756b81;
+font-size: 0.92rem;
+line-height: 1.75;
+overflow-wrap: anywhere;
+white-space: pre-wrap;
+}
 
-/* ===============================
-   SEARCH BAR
+.note-card-footer {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 10px;
+padding-top: 14px;
+border-top: 1px solid #f0e8f6;
+color: #8a8096;
+font-size: 0.77rem;
+}
+
+.note-type {
+padding: 5px 10px;
+border-radius: 20px;
+background: #f5efff;
+color: #9270b4;
+}
+
+/* ================================
+ADD NOTE FORM
 ================================ */
-
-.search-input {
-  width: 100%;
-  max-width: 600px;
-  padding: 14px 20px;
-
-  border: 1px solid #d8b4fe;
-  border-radius: 30px;
-
-  background: rgba(255, 255, 255, 0.9);
-  color: #352449;
-
-  outline: none;
-  transition: 0.3s ease;
-}
-
-.search-input:focus {
-  border-color: #a855f7;
-  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.12);
-}
-
-
-/* ===============================
-   ADD NOTE FORM
-================================ */
-
-.add-note-section {
-  padding: 70px 20px;
-
-  background: linear-gradient(
-    120deg,
-    #fce7f3,
-    #ede9fe,
-    #dbeafe
-  );
-}
 
 .add-note-form {
-  max-width: 700px;
-  margin: auto;
-
-  background: rgba(255, 255, 255, 0.9);
-  padding: 30px;
-
-  border-radius: 22px;
-  box-shadow: 0 10px 35px rgba(147, 112, 219, 0.12);
+margin-bottom: 30px;
+padding: 28px;
+border: 1px solid #e9ddf5;
+border-radius: 20px;
+background: rgba(255, 255, 255, 0.95);
+box-shadow: 0 10px 28px rgba(117, 89, 151, 0.08);
 }
 
-.add-note-form input,
-.add-note-form textarea,
-.add-note-form select {
-  border: 1px solid #ddd6fe;
-  border-radius: 12px;
-  padding: 12px;
+.add-note-form h3 {
+margin-bottom: 22px;
+color: #382b48;
+font-size: 1.35rem;
+font-weight: 700;
 }
 
-.add-note-form input:focus,
-.add-note-form textarea:focus,
-.add-note-form select:focus {
-  border-color: #a855f7;
-  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+.add-note-form .form-label {
+color: #665a76;
+font-size: 0.9rem;
+font-weight: 600;
 }
 
+.add-note-form .form-control,
+.add-note-form .form-select {
+min-height: 46px;
+border: 1px solid #e2d5f0;
+border-radius: 12px;
+background-color: #fff;
+}
 
-/* ===============================
-   ABOUT SECTION
+.add-note-form textarea.form-control {
+min-height: 120px;
+resize: vertical;
+}
+
+.add-note-form .form-control:focus,
+.add-note-form .form-select:focus {
+border-color: #b99bdd;
+box-shadow: 0 0 0 3px rgba(185, 155, 221, 0.15);
+}
+
+/* ================================
+EMPTY STATE
+================================ */
+
+.empty-message {
+padding: 45px 20px;
+text-align: center;
+border: 1px dashed #d9c7ed;
+border-radius: 20px;
+background: rgba(255, 255, 255, 0.6);
+}
+
+.empty-message h3 {
+color: #49385f;
+font-size: 1.25rem;
+}
+
+.empty-message p {
+margin: 0;
+color: #81758e;
+}
+
+/* ================================
+ABOUT SECTION
 ================================ */
 
 .about-section {
-  padding: 80px 20px;
-
-  background: linear-gradient(
-    120deg,
-    #ffffff 0%,
-    #fce7f3 35%,
-    #ede9fe 70%,
-    #dbeafe 100%
-  );
+padding: 75px 0;
+background: linear-gradient(
+120deg,
+#fff9fd,
+#f3eaff,
+#eaf3ff
+);
 }
 
-.about-card {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid #e9d5ff;
-  border-radius: 22px;
-  padding: 35px;
-
-  box-shadow: 0 10px 30px rgba(147, 112, 219, 0.1);
+.about-image {
+display: block;
+width: 100%;
+max-height: 360px;
+object-fit: cover;
+border-radius: 22px;
+box-shadow: 0 12px 30px rgba(117, 89, 151, 0.12);
 }
 
-.about-card p {
-  color: #6b607b;
-  line-height: 1.9;
+.about-section h2 {
+margin-bottom: 20px;
+color: #342843;
+font-size: 2.1rem;
+font-weight: 700;
+line-height: 1.3;
 }
 
+.about-section p:not(.small-label) {
+color: #756a82;
+font-size: 0.96rem;
+line-height: 1.85;
+}
 
-/* ===============================
-   FOOTER
+/* ================================
+FOOTER
 ================================ */
 
-.footer {
-  padding: 25px 20px;
-  text-align: center;
-
-  background: linear-gradient(
-    90deg,
-    #fbcfe8,
-    #e9d5ff,
-    #dbeafe
-  );
-
-  color: #5b5270;
+.site-footer {
+padding: 28px 0;
+background: rgba(255, 255, 255, 0.88);
+border-top: 1px solid #eadff5;
 }
 
-.footer a {
-  color: #9333ea;
-  font-weight: 600;
+.footer-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
 }
 
-.footer a:hover {
-  color: #ec4899;
+.footer-content h3 {
+margin-bottom: 6px;
+color: #77529a;
+font-size: 1.2rem;
+font-weight: 700;
 }
 
+.footer-content p {
+margin: 0;
+color: #83788f;
+font-size: 0.85rem;
+line-height: 1.6;
+}
 
-/* ===============================
-   ANIMATIONS
+.footer-right {
+text-align: right;
+}
+
+/* ================================
+TABLET
 ================================ */
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@media (max-width: 991px) {
+.site-header .navbar {
+padding: 12px 0;
 }
 
-.hero,
-.note-card,
-.about-card {
-  animation: fadeUp 0.7s ease both;
+.navbar-nav {
+padding-top: 15px;
+align-items: stretch !important;
 }
 
+.navbar-nav .nav-link {
+padding: 10px 12px !important;
+}
 
-/* ===============================
-   MOBILE RESPONSIVENESS
+.navbar-nav .add-note-nav {
+margin-top: 8px;
+}
+
+.hero-section {
+padding: 50px 0;
+}
+
+.hero-image-box {
+max-width: 100%;
+}
+
+.hero-image {
+height: 280px;
+}
+
+.notes-section {
+padding-top: 55px;
+padding-bottom: 60px;
+}
+}
+
+/* ================================
+MOBILE
 ================================ */
 
-@media (max-width: 768px) {
-  .hero {
-    padding: 70px 15px 60px;
-  }
-
-  .hero h1 {
-    font-size: 2.3rem;
-  }
-
-  .hero p {
-    font-size: 0.95rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .notes-section,
-  .add-note-section,
-  .about-section {
-    padding: 50px 15px;
-  }
-
-  .add-note-form {
-    padding: 20px;
-  }
-
-  .note-card img {
-    height: 180px;
-  }
+@media (max-width: 767px) {
+.container {
+padding-left: 18px;
+padding-right: 18px;
 }
+
+.hero-section {
+padding: 42px 0 45px;
+}
+
+.hero-section h1 {
+font-size: 2.55rem;
+line-height: 1.12;
+letter-spacing: -1px;
+}
+
+.hero-description {
+font-size: 0.94rem;
+line-height: 1.75;
+}
+
+.hero-image-box {
+margin: 12px 0 0;
+padding: 8px;
+border-radius: 18px;
+}
+
+.hero-image {
+height: 230px;
+border-radius: 13px;
+}
+
+.image-caption {
+padding: 10px 5px 2px;
+font-size: 0.75rem;
+}
+
+.section-heading {
+align-items: flex-start;
+flex-direction: column;
+gap: 18px;
+}
+
+.section-heading h2 {
+font-size: 1.9rem;
+}
+
+.section-heading .primary-button {
+width: 100%;
+}
+
+.notes-tools {
+grid-template-columns: 1fr;
+gap: 12px;
+margin-bottom: 22px;
+}
+
+.search-box {
+min-height: 48px;
+}
+
+.subject-filter {
+width: 100%;
+}
+
+.note-card {
+padding: 20px;
+border-radius: 18px;
+}
+
+.note-card h3 {
+font-size: 1.12rem;
+}
+
+.note-content {
+font-size: 0.9rem;
+line-height: 1.7;
+}
+
+.note-card-footer {
+align-items: flex-start;
+flex-direction: column;
+}
+
+.add-note-form {
+padding: 20px;
+}
+
+.about-section {
+padding: 50px 0;
+}
+
+.about-image {
+max-height: 250px;
+}
+
+.about-section h2 {
+font-size: 1.75rem;
+}
+
+.footer-content {
+align-items: flex-start;
+flex-direction: column;
+}
+
+.footer-right {
+text-align: left;
+}
+}
+
+/* ================================
+SMALL MOBILE
+================================ */
+
+@media (max-width: 400px) {
+.hero-section h1 {
+font-size: 2.15rem;
+}
+
+.brand-name {
+font-size: 1.25rem;
+}
+
+.note-card {
+padding: 16px;
+}
+
+.subject-badge {
+font-size: 0.72rem;
+}
+   }
