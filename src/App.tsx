@@ -172,9 +172,8 @@ function App() {
         </nav>
       </header>
 
-      {/* Main content */}
       <main>
-        {/* Hero section */}
+        {/* Hero */}
         <section className="hero-section" id="home">
           <div className="container">
             <div className="row align-items-center g-4">
@@ -215,7 +214,7 @@ function App() {
           </div>
         </section>
 
-        {/* Notes section */}
+        {/* Notes */}
         <section className="notes-section container" id="notes">
           <div className="section-heading">
             <div>
@@ -288,7 +287,7 @@ function App() {
             </div>
           )}
 
-          {/* Search and subject filter */}
+          {/* Search and filter */}
           <div className="notes-tools">
             <div className="search-box">
               <span>⌕</span>
@@ -313,7 +312,7 @@ function App() {
             </select>
           </div>
 
-          {/* Notes cards */}
+          {/* Note cards */}
           <div className="row g-4">
             {filteredNotes.map((note) => (
               <div className="col-md-6 col-lg-4" key={note.id}>
@@ -351,7 +350,7 @@ function App() {
           )}
         </section>
 
-        {/* About section */}
+        {/* About */}
         <section className="about-section" id="about">
           <div className="container">
             <div className="row align-items-center g-4">
@@ -402,4 +401,4 @@ function App() {
 }
 
 export default App;
-                  
+                                           
